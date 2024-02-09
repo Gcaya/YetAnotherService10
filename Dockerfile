@@ -14,5 +14,6 @@ WORKDIR /App
 COPY --from=build-env /App/out .
 # App Service
 ENV ASPNETCORE_URLS=http://+:80
+ENV ASPNETCORE_ENVIRONMENT=Development
 ENTRYPOINT ["dotnet", "hello.dll"]
 
